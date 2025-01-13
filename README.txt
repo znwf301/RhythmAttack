@@ -1,4 +1,6 @@
 # RhythmAttack
+GitHub link: https://github.com/znwf301/RhythmAttack
+Html link: https://znwf301.github.io/RhythmAttack/
 
 ____________
 RHYHM ATTACK
