@@ -3,7 +3,7 @@ GitHub link: https://github.com/znwf301/RhythmAttack
 Html link: https://znwf301.github.io/RhythmAttack/
 
 ____________
-RHYHM ATTACK
+RHYTHM ATTACK
 ____________
 
 This is a simple rhythm game where you have to hit the notes at the right time in order to score points.
