@@ -65,42 +65,42 @@ function cleanslate() {
 
 function keyPressed() {
   // Handles characters inputs
-  if (keyCode === LEFT_ARROW && lY > 950 || key == 'd' && lY > 950) {
+  if (keyCode === LEFT_ARROW && lY > 950 && lx == 100 || key == 'd' && lY > 950 && lx == 100 || key == 'D' && lY < 950 && lx == 100) {
     score = score + 25;
     if (score > 99*CurrentLevel) {
       cleanslate();
     }
-  } else if (keyCode === LEFT_ARROW && lY < 950 || key == 'd' && lY < 950) {
+  } else if (keyCode === LEFT_ARROW && lY < 950 && lx == 100 || key == 'd' && lY < 950 && lx == 100 || key == 'D' && lY < 950 && lx == 100) {
     M_score = M_score + 1
     if (M_score > 9) {
       AS = ActiveScreen.LoseScreen
     }
-  } else if (key == 'f' && uY > 950) {
+  } else if (keyCode === DOWN_ARROW && dY < 950 && dx == 200 || key == 'f' && dY > 950 && dx == 200 || key == 'F' && dY < 950 && dx == 200) {
     score = score + 25;
     if (score > 99*CurrentLevel) {
       cleanslate();
     }
-  } else if (key == 'f' && uY < 950) {
+  } else if (keyCode === DOWN_ARROW && dY < 950 && dx == 200 || key == 'f' && dY < 950 && dx == 200 || key == 'F' && dY < 950 && dx == 200) {
     M_score = M_score + 1
     if (M_score > 9) {
       AS = ActiveScreen.LoseScreen
     }
-  } else if (key == 'j' && lY > 950) {
+  } else if (keyCode === UP_ARROW && uY < 950 && ux == 300 || key == 'j' && uY > 950  && ux == 300|| key == 'J' && uY < 950 && ux == 300) {
     score = score + 25;
     if (score > 99*CurrentLevel) {
       cleanslate();
     }
-  } else if (key == 'j' && lY < 950) {
+  } else if (keyCode === UP_ARROW && uY < 950 && ux == 300 || key == 'j' && lY < 950 && ux == 300 || key == 'J' && uY < 950 && ux == 300) {
     M_score = M_score + 1
     if (M_score > 9) {
       AS = ActiveScreen.LoseScreen
     }
-  } else if (key == 'k' && uY > 950) {
+  } else if (keyCode === RIGHT_ARROW && rY < 950 && rx == 400 || key == 'k' && rY > 950 && rx == 400 || key == 'K' && rY < 950 && rx == 400) {
     score = score + 25;
-    if (score > 99*CurrentLevel) {
+    if (score > 99*CurrentLevel) { 
       cleanslate();
     }
-  } else if (key == 'k' && uY < 950) {
+  } else if (keyCode === RIGHT_ARROW && rY < 950  && rx == 400 || key == 'k' && rY < 950 && rx == 400 || key == 'K' && rY < 950 && rx == 400) {
     M_score = M_score + 1
     if (M_score > 9) {
       AS = ActiveScreen.LoseScreen
