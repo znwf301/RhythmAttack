@@ -30,6 +30,10 @@ var lY = 0;
 var uY = 0;
 var dY = 0;
 var rY = 0;
+var lx = 100;
+var ux = 200;
+var dx = 300;
+var rx = 400;
   
 function preload(){    
   crtimg = loadImage("Image Files/CRT effect.png")
@@ -65,7 +69,7 @@ function cleanslate() {
 
 function keyPressed() {
   // Handles characters inputs
-  if (keyCode === LEFT_ARROW && lY > 950 && lx == 100 || key == 'd' && lY > 950 && lx == 100 || key == 'D' && lY < 950 && lx == 100) {
+  if (keyCode === LEFT_ARROW && lY > 950 && lx == 100 || key == 'd' && lY > 950 && lx == 100 || key == 'D' && lY > 950 && lx == 100) {
     score = score + 25;
     if (score > 99*CurrentLevel) {
       cleanslate();
@@ -75,7 +79,7 @@ function keyPressed() {
     if (M_score > 9) {
       AS = ActiveScreen.LoseScreen
     }
-  } else if (keyCode === DOWN_ARROW && dY < 950 && dx == 200 || key == 'f' && dY > 950 && dx == 200 || key == 'F' && dY < 950 && dx == 200) {
+  } else if (keyCode === DOWN_ARROW && dY > 950 && dx == 200 || key == 'f' && dY > 950 && dx == 200 || key == 'F' && dY > 950 && dx == 200) {
     score = score + 25;
     if (score > 99*CurrentLevel) {
       cleanslate();
@@ -85,7 +89,7 @@ function keyPressed() {
     if (M_score > 9) {
       AS = ActiveScreen.LoseScreen
     }
-  } else if (keyCode === UP_ARROW && uY < 950 && ux == 300 || key == 'j' && uY > 950  && ux == 300|| key == 'J' && uY < 950 && ux == 300) {
+  } else if (keyCode === UP_ARROW && uY > 950 && ux == 300 || key == 'j' && uY > 950  && ux == 300|| key == 'J' && uY > 950 && ux == 300) {
     score = score + 25;
     if (score > 99*CurrentLevel) {
       cleanslate();
@@ -95,7 +99,7 @@ function keyPressed() {
     if (M_score > 9) {
       AS = ActiveScreen.LoseScreen
     }
-  } else if (keyCode === RIGHT_ARROW && rY < 950 && rx == 400 || key == 'k' && rY > 950 && rx == 400 || key == 'K' && rY < 950 && rx == 400) {
+  } else if (keyCode === RIGHT_ARROW && rY > 950 && rx == 400 || key == 'k' && rY > 950 && rx == 400 || key == 'K' && rY > 950 && rx == 400) {
     score = score + 25;
     if (score > 99*CurrentLevel) { 
       cleanslate();
@@ -216,10 +220,10 @@ function LV1draw() {
   background(67,97,17);
   rect(300,1050,600,160)
   fill(255);
-  image(L_ArrowImg,100, lY);
-  image(U_ArrowImg,200, -1000);
-  image(D_ArrowImg,300, -1000);
-  image(R_ArrowImg,400, -1000);
+  image(L_ArrowImg,lx, lY);
+  image(U_ArrowImg,ux, -1000);
+  image(D_ArrowImg,dx, -1000);
+  image(R_ArrowImg,rx, -1000);
   lY = lY + 11;
   uY = uY + 0;
   dY = dY + 0;
@@ -240,10 +244,10 @@ function LV2draw() {
   background(67,97,17);
   rect(300,1050,600,160)
   fill(255);
-  image(L_ArrowImg,100, lY);
-  image(U_ArrowImg,200, uY);
-  image(D_ArrowImg,300, -1000);
-  image(R_ArrowImg,400, -1000);
+  image(L_ArrowImg,lx, lY);
+  image(U_ArrowImg,ux, uY);
+  image(D_ArrowImg,dx, -1000);
+  image(R_ArrowImg,rx, -1000);
   lY = lY + 25;
   uY = uY + 27;
   dY = dY + 0;
@@ -267,10 +271,10 @@ function LV3draw() {
   background(67,97,17);
   rect(300,1050,600,160)
   fill(255);
-  image(L_ArrowImg,100, lY);
-  image(U_ArrowImg,200, uY);
-  image(D_ArrowImg,300, dY);
-  image(R_ArrowImg,400, -1000);
+  image(L_ArrowImg,lx, lY);
+  image(U_ArrowImg,ux, uY);
+  image(D_ArrowImg,dx, dY);
+  image(R_ArrowImg,rx, -1000);
   lY = lY + 35;
   uY = uY + 100;
   dY = dY + 30;
@@ -298,10 +302,10 @@ function LV4draw() {
   background(67,97,17);
   rect(300,1050,600,160)
   fill(255);
-  image(L_ArrowImg,100, lY);
-  image(U_ArrowImg,200, uY);
-  image(D_ArrowImg,300, dY);
-  image(R_ArrowImg,400, rY);
+  image(L_ArrowImg,lx, lY);
+  image(U_ArrowImg,ux, uY);
+  image(D_ArrowImg,dx, dY);
+  image(R_ArrowImg,rx, rY);
   lY = lY + 40;
   uY = uY + 45;
   dY = dY + 50;
@@ -329,10 +333,10 @@ function LV5draw() {
   background(67,97,17);
   rect(300,1050,600,160)
   fill(255);
-  image(L_ArrowImg,100, lY);
-  image(U_ArrowImg,200, uY);
-  image(D_ArrowImg,300, dY);
-  image(R_ArrowImg,400, rY);
+  image(L_ArrowImg,lx, lY);
+  image(U_ArrowImg,ux, uY);
+  image(D_ArrowImg,dx, dY);
+  image(R_ArrowImg,rx, rY);
   lY = lY + 90;
   uY = uY + 180;
   dY = dY + 240;
